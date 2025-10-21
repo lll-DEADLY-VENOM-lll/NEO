@@ -6,7 +6,7 @@ from pytgcalls.exceptions import NoActiveGroupCall
 
 import config
 from RessoMusic import LOGGER, app, userbot
-from RessoMusic.core.call import Anony
+from RessoMusic.core.call import AMBOTOP
 from RessoMusic.misc import sudo
 from RessoMusic.plugins import ALL_MODULES
 from RessoMusic.utils.database import get_banned_users, get_gbanned
@@ -51,8 +51,9 @@ async def init():
     await AMBOTOP.decorators()
     await idle()
     await app.stop()
-    LOGGER("RessoMusic").info("Stopping RessoMusic Bot...")
+    LOGGER("RessoMusic").info("Stopping AMBOTOP Bot...")
 
 
 if __name__ == "__main__":
     asyncio.get_event_loop().run_until_complete(init())
+
